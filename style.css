@@ -102,12 +102,12 @@ ul {
 
 .btn-ios {
     background-color: var(--strong-cyan);
-    border-bottom: 3px solid hsl(171, 66%, 35%);
+    border-bottom: 4px solid hsl(171, 66%, 35%);
 }
 
 .btn-mac {
     background-color: var(--light-blue);
-    border-bottom: 3px solid hsl(233, 65%, 55%);
+    border-bottom: 4px solid hsl(233, 65%, 55%);
 }
 
 /* =========================
