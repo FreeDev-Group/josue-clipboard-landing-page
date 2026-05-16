@@ -1,0 +1,414 @@
+/* =========================
+   CSS RESET
+========================= */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   ROOT VARIABLES
+========================= */
+
+:root {
+    --strong-cyan: hsl(171, 66%, 44%);
+    --light-blue: hsl(233, 100%, 69%);
+
+    --dark-grayish-blue: hsl(210, 10%, 33%);
+    --grayish-blue: hsl(201, 11%, 66%);
+
+    --footer-bg: hsl(210, 20%, 96%);
+
+    --font-main: 'Bai Jamjuree', sans-serif;
+
+    --transition: 0.3s ease;
+}
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+body {
+    font-family: var(--font-main);
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--grayish-blue);
+    background-color: white;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* =========================
+   REUSABLE CLASSES
+========================= */
+
+.container {
+    width: min(90%, 1120px);
+    margin-inline: auto;
+}
+
+.section-small {
+    max-width: 720px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+.section-title {
+    color: var(--dark-grayish-blue);
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    font-size: 1.1rem;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+    color: white;
+    font-weight: 600;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    transition: var(--transition);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+.btn-ios {
+    background-color: var(--strong-cyan);
+    border-bottom: 3px solid hsl(171, 66%, 35%);
+}
+
+.btn-mac {
+    background-color: var(--light-blue);
+    border-bottom: 3px solid hsl(233, 65%, 55%);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background-image: url("./images/bg-header-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding-top: 7.5rem;
+    padding-bottom: 10rem;
+}
+
+.hero-container {
+    max-width: 720px;
+}
+
+.hero-logo {
+    margin-inline: auto;
+    margin-bottom: 4rem;
+}
+
+.hero-title {
+    color: var(--dark-grayish-blue);
+    font-size: 2.2rem;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+}
+
+.hero-description {
+    margin-bottom: 3rem;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* =========================
+   FEATURES INTRO
+========================= */
+
+.features-intro {
+    margin-bottom: 5rem;
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+    margin-bottom: 10rem;
+}
+
+.features-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+.features-image img {
+    width: 100%;
+}
+
+.features-content {
+    text-align: center;
+    width: min(90%, 400px);
+}
+
+.feature-item:not(:last-child) {
+    margin-bottom: 3rem;
+}
+
+.feature-item h3 {
+    color: var(--dark-grayish-blue);
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+
+/* =========================
+   ACCESS SECTION
+========================= */
+
+.access {
+    margin-bottom: 10rem;
+    text-align: center;
+}
+
+.access .section-small {
+    margin-bottom: 4rem;
+}
+
+.devices-image img {
+    margin-inline: auto;
+}
+
+/* =========================
+   WORKFLOW
+========================= */
+
+.workflow {
+    margin-bottom: 10rem;
+}
+
+.workflow-heading {
+    margin-bottom: 5rem;
+}
+
+.workflow-cards {
+    display: grid;
+    gap: 4rem;
+}
+
+.workflow-card {
+    text-align: center;
+}
+
+.workflow-card img {
+    margin-inline: auto;
+    margin-bottom: 2.5rem;
+}
+
+.workflow-card h3 {
+    color: var(--dark-grayish-blue);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   PARTNERS
+========================= */
+
+.partners {
+    margin-bottom: 10rem;
+}
+
+.partners-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+/* =========================
+   DOWNLOAD
+========================= */
+
+.download {
+    margin-bottom: 10rem;
+}
+
+.download .section-description {
+    margin-bottom: 3rem;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    background-color: var(--footer-bg);
+    padding: 3.5rem 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    text-align: center;
+}
+
+.footer-logo img {
+    width: 55px;
+}
+
+.footer-nav {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.footer-nav a {
+    color: var(--dark-grayish-blue);
+    transition: var(--transition);
+}
+
+.footer-nav a:hover {
+    color: var(--strong-cyan);
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-socials a {
+    transition: var(--transition);
+}
+
+.footer-socials a:hover {
+    transform: translateY(-3px);
+}
+
+/* =========================
+   DESKTOP RESPONSIVE
+========================= */
+
+@media (min-width: 768px) {
+
+    /* HERO */
+
+    .hero {
+        background-image: url("./images/bg-header-desktop.png");
+        background-size: cover;
+        padding-top: 8rem;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* SECTION TITLES */
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    /* FEATURES */
+
+    .features-wrapper {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 7rem;
+    }
+
+    .features-image {
+        width: 55%;
+        margin-left: -3rem;
+    }
+
+    .features-content {
+        text-align: left;
+    }
+
+    /* WORKFLOW */
+
+    .workflow-cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    /* PARTNERS */
+
+    .partners-container {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    /* FOOTER */
+
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .footer-nav {
+        grid-template-columns: repeat(3, auto);
+        column-gap: 5rem;
+        row-gap: 1rem;
+        flex: 1;
+    }
+
+}
+
+/* =========================
+   LARGE DESKTOP
+========================= */
+
+@media (min-width: 1200px) {
+
+    .hero {
+        padding-bottom: 9rem;
+    }
+
+    .features-image {
+        margin-left: -5rem;
+    }
+
+}
